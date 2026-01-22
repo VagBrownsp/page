@@ -26,7 +26,7 @@
 
     // Delay para parecer consulta real
     setTimeout(() => {
-      resultado.innerText = 'Com chances de aprovação';
+      resultado.innerText = 'COM CHANCES DE APROVAÇÃO';
       resultado.style.color = '#16a34a';
       resultado.classList.remove('piscando');
       whatsapp.classList.remove('hidden');
