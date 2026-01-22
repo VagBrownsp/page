@@ -1,0 +1,126 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto';
+    }
+
+    body {
+      background: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 620px;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    p {
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #dc2626;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #b91c1c;
+    }
+
+    .btn-secondary {
+      background: #1f2937;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .btn-secondary:hover {
+        background: #e6dddd;
+        transition: 0.8s;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 16px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 16px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .resultado {
+      font-weight: bold;
+      color: #16a34a;
+      margin-bottom: 16px;
+    }
+    @keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.piscando {
+  animation: piscar 1s infinite;
+}
+
+
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #22c55e;
+      color: #ffff;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .whatsapp:hover {
+       background: #e6dddd;
+       transition: 0.8s;
+    }
+
+    .whatsapp img {
+      width: 24px;
+      height: 24px;
+    }

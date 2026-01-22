@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="styleotm.css" media="screen" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> <style></style>
+  <script src="script.js"></script>
+  <title>CONSULTOR VAGNER BARBOSA</title>
+
+</head>
+<body>
+
+  <!-- PÁGINA 1 -->
+  <section id="page1" class="container">
+    <h1>Realize o sonho da sua Honda 0km</h1>
+    <p>Veja o vídeo e faça sua pré-análise agora mesmo</p>
+
+    <video autoplay playsinline loop>
+      <source src="video/fogos-artificio.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <button class="btn-primary" onclick="goToPage2()">
+      CLIQUE AQUI PARA PRÉ-ANÁLISE
+    </button>
+  </section>
+
+  <!-- PÁGINA 2 -->
+  <section id="page2" class="container hidden">
+    <h2>Pré-análise rápida</h2>
+    <p>Digite seu CPF para verificar disponibilidade</p>
+
+    <input id="cpf" type="text" placeholder="Digite seu CPF aqui" />
+
+    <button class="btn-secondary" onclick="validarCPF()">
+      ANALISAR
+    </button>
+
+    <p id="resultado" class="resultado hidden">
+      Com chances de aprovação
+    </p>
+
+    <a id="whatsappBtn" href="https://wa.me/5512991791629" target="_blank" class="whatsapp hidden">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+      FALAR COM CONSULTOR VAGNER BARBOSA
+    </a>
+  </section>
+
+</body>
+</html>
