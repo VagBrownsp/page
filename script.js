@@ -30,6 +30,7 @@
       resultado.style.color = '#16a34a';
       resultado.classList.remove('piscando');
       whatsapp.classList.remove('hidden');
+      
     }, 2000);
   }
 

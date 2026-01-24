@@ -1,4 +1,4 @@
-  * {
+  */* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -124,3 +124,210 @@
       width: 24px;
       height: 24px;
     }
+*/
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* FUNDO */
+body {
+  background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 620px;
+  padding: 28px;
+  border-radius: 20px;
+  border-top: 6px solid #cc0000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ANIMAÇÃO SUAVE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TÍTULOS */
+h1, h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+p {
+  color: #6b7280;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+/* VÍDEO */
+video {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 18px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #cc0000;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+}
+
+/* BOTÕES */
+button {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* BOTÃO PRINCIPAL (HONDA) */
+.btn-primary {
+  background: linear-gradient(180deg, #cc0000, #a80000);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-secondary {
+  background: #111827;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.btn-secondary:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+}
+
+/* RESULTADO */
+.resultado {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+/* PISCANDO */
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.piscando {
+  animation: piscar 1s infinite;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.whatsapp:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.whatsapp img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ESCONDER */
+.hidden {
+  display: none;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* TABLETS */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  button, input {
+    font-size: 17px;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button, input {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .container {
+    padding: 22px;
+  }
+}
