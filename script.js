@@ -18,13 +18,13 @@
       return;
     }
 
-    // Etapa 1: simulando consulta
+    // Etapa 1: consulta
     resultado.innerText = 'Pesquisando...';
     resultado.style.color = '#ca8a04';
     resultado.classList.remove('hidden');
     resultado.classList.add('piscando');
 
-    // Delay para parecer consulta real
+    // Delay consulta
     setTimeout(() => {
       resultado.innerText = 'COM CHANCES DE APROVAÇÃO';
       resultado.style.color = '#16a34a';
