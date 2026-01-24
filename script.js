@@ -33,13 +33,7 @@
       
     }, 2000);
   }
-document.addEventListener("click", () => {
-  const video = document.getElementById("videoAprovacao");
 
-  if (video.paused) {
-    video.muted = false; // libera o áudio
-    video.play();
-  }
 }, { once: true });
   function cpfValido(cpf) {
     if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
