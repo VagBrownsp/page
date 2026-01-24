@@ -1,60 +1,54 @@
- function goToPage2() {
-    document.getElementById('page1').classList.add('hidden');
-    document.getElementById('page2').classList.remove('hidden');
+function goToPage2() {
+  document.getElementById('page1').classList.add('hidden');
+  document.getElementById('page2').classList.remove('hidden');
+}
+
+function validarCPF() {
+  const cpf = document.getElementById('cpf').value.replace(/\D/g, '');
+  const resultado = document.getElementById('resultado');
+  const whatsapp = document.getElementById('whatsappBtn');
+
+  resultado.classList.add('hidden');
+  resultado.classList.remove('piscando');
+  whatsapp.classList.add('hidden');
+
+  if (!cpfValido(cpf)) {
+    alert('Digite um CPF válido');
+    return;
   }
 
-  function validarCPF() {
-    const cpf = document.getElementById('cpf').value.replace(/\D/g, '');
-    const resultado = document.getElementById('resultado');
-    const whatsapp = document.getElementById('whatsappBtn');
+  resultado.innerText = 'Pesquisando...';
+  resultado.style.color = '#ca8a04';
+  resultado.classList.remove('hidden');
+  resultado.classList.add('piscando');
 
-    // Reset visual
-    resultado.classList.add('hidden');
+  setTimeout(() => {
+    resultado.innerText = 'COM CHANCES DE APROVAÇÃO';
+    resultado.style.color = '#16a34a';
     resultado.classList.remove('piscando');
-    whatsapp.classList.add('hidden');
+    whatsapp.classList.remove('hidden');
+  }, 2000);
+}
 
-    if (!cpfValido(cpf)) {
-      alert('Digite um CPF válido');
-      return;
-    }
+function cpfValido(cpf) {
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
 
-    // Etapa 1: consulta
-    resultado.innerText = 'Pesquisando...';
-    resultado.style.color = '#ca8a04';
-    resultado.classList.remove('hidden');
-    resultado.classList.add('piscando');
-
-    // Delay consulta
-    setTimeout(() => {
-      resultado.innerText = 'COM CHANCES DE APROVAÇÃO';
-      resultado.style.color = '#16a34a';
-      resultado.classList.remove('piscando');
-      whatsapp.classList.remove('hidden');
-      
-    }, 2000);
+  let soma = 0;
+  for (let i = 0; i < 9; i++) {
+    soma += parseInt(cpf.charAt(i)) * (10 - i);
   }
 
-}, { once: true });
-  function cpfValido(cpf) {
-    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+  let resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.charAt(9))) return false;
 
-    let soma = 0;
-    for (let i = 0; i < 9; i++) {
-      soma += parseInt(cpf.charAt(i)) * (10 - i);
-    }
-
-    let resto = (soma * 10) % 11;
-    if (resto === 10 || resto === 11) resto = 0;
-    if (resto !== parseInt(cpf.charAt(9))) return false;
-
-    soma = 0;
-    for (let i = 0; i < 10; i++) {
-      soma += parseInt(cpf.charAt(i)) * (11 - i);
-    }
-
-    resto = (soma * 10) % 11;
-    if (resto === 10 || resto === 11) resto = 0;
-
-    return resto === parseInt(cpf.charAt(10));
+  soma = 0;
+  for (let i = 0; i < 10; i++) {
+    soma += parseInt(cpf.charAt(i)) * (11 - i);
   }
 
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+
+  return resto === parseInt(cpf.charAt(10));
+}
