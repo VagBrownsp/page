@@ -7,10 +7,13 @@ function validarCPF() {
   const cpf = document.getElementById('cpf').value.replace(/\D/g, '');
   const resultado = document.getElementById('resultado');
   const whatsapp = document.getElementById('whatsappBtn');
+  const ficha = document.querySelector('.btn-ficha');
+
 
   resultado.classList.add('hidden');
   resultado.classList.remove('piscando');
   whatsapp.classList.add('hidden');
+  ficha.classList.add('hidden');
 
   if (!cpfValido(cpf)) {
     alert('Digite um CPF válido');
@@ -27,6 +30,7 @@ function validarCPF() {
     resultado.style.color = '#16a34a';
     resultado.classList.remove('piscando');
     whatsapp.classList.remove('hidden');
+    ficha.classList.remove('hidden');
   }, 2000);
 }
 
